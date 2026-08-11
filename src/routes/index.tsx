@@ -1,24 +1,47 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Nav } from "@/components/site/Nav";
+import { Hero } from "@/components/site/Hero";
+import { WhatWeBuild } from "@/components/site/WhatWeBuild";
+import { SelectedWork } from "@/components/site/SelectedWork";
+import { Process } from "@/components/site/Process";
+import { WhyUs } from "@/components/site/WhyUs";
+import { Pricing, Proof } from "@/components/site/Pricing";
+import { Faq } from "@/components/site/Faq";
+import { FinalCta } from "@/components/site/FinalCta";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const title = "Startup Setup — Custom websites & business software studio";
+const description =
+  "Startup Setup is a digital product studio building custom business websites, CRMs, dashboards and automation for companies that need better digital infrastructure.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-ivory">
+      <Nav />
+      <main>
+        <Hero />
+        <WhatWeBuild />
+        <SelectedWork />
+        <Process />
+        <WhyUs />
+        <Pricing />
+        <Proof />
+        <Faq />
+        <FinalCta />
+      </main>
     </div>
   );
 }
