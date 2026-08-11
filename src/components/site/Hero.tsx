@@ -16,9 +16,9 @@ export function Hero() {
             </div>
 
             <h1 className="headline mt-6 text-[clamp(2.2rem,3.15vw,3.15rem)]">
-              The digital foundation your business
+              The digital foundation
               <br />
-              needs to <span className="text-brand">grow.</span>
+              your business needs to <span className="text-brand">grow.</span>
             </h1>
 
             <p className="mt-6 max-w-xl text-[16px] leading-relaxed text-muted-foreground lg:text-[17px]">
