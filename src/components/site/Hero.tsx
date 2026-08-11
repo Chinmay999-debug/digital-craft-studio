@@ -15,7 +15,7 @@ export function Hero() {
               <span className="label-mono text-muted-foreground">India · Remote</span>
             </div>
 
-            <h1 className="headline mt-6 text-[clamp(2.4rem,3.85vw,3.7rem)]">
+            <h1 className="headline mt-6 text-[clamp(2.2rem,3.15vw,3.15rem)]">
               The digital foundation your business
               <br />
               needs to <span className="text-brand">grow.</span>
