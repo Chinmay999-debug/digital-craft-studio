@@ -51,7 +51,7 @@ export function Process() {
       (entries) => {
         entries.forEach((e) => {
           if (e.isIntersecting) {
-            const i = Number((e.target as HTMLElement).dataset.index);
+            const i = Number((e.target as HTMLElement).dataset['index']);
             setActive(i);
           }
         });
@@ -143,8 +143,8 @@ export function Process() {
               ))}
             </div>
             <div className="mt-4 flex items-center justify-between font-mono text-[10px] tracking-wider text-muted-foreground uppercase">
-              <span>Stage {steps[active].n} of 05</span>
-              <span>{steps[active].title}</span>
+              <span>Stage {steps[active]?.n} of 05</span>
+              <span>{steps[active]?.title}</span>
             </div>
           </div>
         </div>
