@@ -145,7 +145,7 @@ function ProjectCard({ p, delay }: { p: Project; delay: number }) {
               </a>
             ) : (
               <span className="inline-flex items-center gap-2 font-mono text-[11px] text-muted-foreground">
-                {isPrivate ? "Demo available on request" : "Reference on request"}
+                {isPrivate ? "Confidential URL withheld" : "Reference on request"}
               </span>
             )}
           </div>

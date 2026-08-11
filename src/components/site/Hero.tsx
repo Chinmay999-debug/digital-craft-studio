@@ -15,10 +15,10 @@ export function Hero() {
               <span className="label-mono text-muted-foreground">India · Remote</span>
             </div>
 
-            <h1 className="headline mt-6 text-[clamp(2.6rem,4.6vw,4.4rem)]">
-              The digital foundation
+            <h1 className="headline mt-6 text-[clamp(2.4rem,3.85vw,3.7rem)]">
+              The digital foundation your business
               <br />
-              your business needs to <span className="text-brand">grow.</span>
+              needs to <span className="text-brand">grow.</span>
             </h1>
 
             <p className="mt-6 max-w-xl text-[16px] leading-relaxed text-muted-foreground lg:text-[17px]">
