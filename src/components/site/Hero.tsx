@@ -7,7 +7,7 @@ export function Hero() {
     <section id="top" className="relative overflow-hidden bg-ivory pt-28 pb-14 lg:pt-32">
       <div className="pointer-events-none absolute inset-0 grid-lines opacity-60 [mask-image:radial-gradient(120%_80%_at_50%_0%,black,transparent)]" />
       <div className="relative mx-auto max-w-[1600px] px-6 lg:px-10">
-        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)] xl:gap-14">
+        <div className="grid items-center gap-10 lg:grid-cols-[minmax(0,1.02fr)_minmax(0,1fr)] xl:gap-14">
           <Reveal>
             <div className="flex items-center gap-3">
               <span className="label-mono text-brand">Digital product studio</span>
@@ -15,7 +15,7 @@ export function Hero() {
               <span className="label-mono text-muted-foreground">India · Remote</span>
             </div>
 
-            <h1 className="headline mt-6 text-[clamp(2.2rem,3.15vw,3.15rem)]">
+            <h1 className="headline mt-6 text-[clamp(2.1rem,2.75vw,2.85rem)]">
               The digital foundation
               <br />
               your business needs to <span className="text-brand">grow.</span>
