@@ -7,6 +7,16 @@ export function useInView<T extends HTMLElement>(threshold = 0.18) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    // Elements already in (or above) the viewport on mount shouldn't wait on the
+    // observer's first async callback — that lag is what causes a flash of blank
+    // content on real-world network/CPU conditions.
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      setVisible(true);
+      return;
+    }
+
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
