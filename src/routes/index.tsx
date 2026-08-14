@@ -12,6 +12,8 @@ import { FinalCta } from "@/components/site/FinalCta";
 const title = "Startup Setup | Custom websites & business software studio";
 const description =
   "Startup Setup is a digital product studio building custom business websites, CRMs, dashboards and automation for companies that need better digital infrastructure.";
+const siteUrl = "https://startupsetup.in";
+const ogImage = `${siteUrl}/og-image.png`;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -21,7 +23,14 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: siteUrl },
+      { property: "og:image", content: ogImage },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: title },
+      { name: "twitter:description", content: description },
+      { name: "twitter:image", content: ogImage },
     ],
   }),
   component: Index,
