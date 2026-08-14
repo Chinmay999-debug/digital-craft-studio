@@ -6,9 +6,12 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
-// GitHub Pages serves this repo at /digital-craft-studio/, so asset URLs need
-// that prefix baked in. Only applies to the dedicated GH Pages export build;
-// local dev and the normal Cloudflare build stay at the default base "/".
+// GitHub Pages serves this site from the custom domain root (startupsetup.in),
+// not a /digital-craft-studio/ subpath, so asset URLs stay at base "/" — same
+// as local dev and the normal Cloudflare build. This flag only swaps the nitro
+// preset to a plain Node server so the export script can boot it locally and
+// snapshot the rendered HTML into static docs/ output; Cloudflare's own build
+// stays on the cloudflare-module preset.
 const isGithubPagesBuild = process.env["GITHUB_PAGES_BUILD"] === "true";
 
 export default defineConfig({
@@ -17,5 +20,5 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
-  ...(isGithubPagesBuild ? { vite: { base: "/digital-craft-studio/" } } : {}),
+  ...(isGithubPagesBuild ? { nitro: { preset: "node-server" } } : {}),
 });
