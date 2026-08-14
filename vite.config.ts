@@ -6,10 +6,16 @@
 // You can pass additional config via defineConfig({ vite: { ... }, etc... }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
 
+// GitHub Pages serves this repo at /digital-craft-studio/, so asset URLs need
+// that prefix baked in. Only applies to the dedicated GH Pages export build;
+// local dev and the normal Cloudflare build stay at the default base "/".
+const isGithubPagesBuild = process.env["GITHUB_PAGES_BUILD"] === "true";
+
 export default defineConfig({
   tanstackStart: {
     // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  ...(isGithubPagesBuild ? { vite: { base: "/digital-craft-studio/" } } : {}),
 });

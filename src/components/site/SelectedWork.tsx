@@ -164,7 +164,7 @@ const projects: Project[] = [
       "A custom physiotherapy website built around patient journeys, clear treatment information and appointment conversion.",
     visual: (
       <img
-        src="/work/arise-physiotherapy.jpg"
+        src={`${import.meta.env.BASE_URL}work/arise-physiotherapy.jpg`}
         alt="Arise Physiotherapy website"
         className="h-full w-full object-cover object-top"
       />
@@ -182,7 +182,7 @@ const projects: Project[] = [
       "A dual-specialty clinic website for dermatology and endocrinology, structured around clear service discovery and consultation booking.",
     visual: (
       <img
-        src="/work/ilona-clinics.jpg"
+        src={`${import.meta.env.BASE_URL}work/ilona-clinics.jpg`}
         alt="Ilona Clinics website"
         className="h-full w-full object-cover object-top"
       />
@@ -200,7 +200,7 @@ const projects: Project[] = [
       "A calm, conversion-focused website for a physiotherapy practice, built around treatment information and direct patient contact.",
     visual: (
       <img
-        src="/work/physiozen.jpg"
+        src={`${import.meta.env.BASE_URL}work/physiozen.jpg`}
         alt="PhysioZen website"
         className="h-full w-full object-cover object-top"
       />
