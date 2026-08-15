@@ -5,7 +5,7 @@ import { WhatWeBuild } from "@/components/site/WhatWeBuild";
 const title = "Services | Startup Setup";
 const description =
   "Custom business websites and custom software, with automation and AI built in — from Startup Setup, a digital product studio.";
-const siteUrl = "https://startupsetup.in/services";
+const siteUrl = "https://startupsetup.in/services/";
 const ogImage = "https://startupsetup.in/og-image.png";
 
 export const Route = createFileRoute("/services")({

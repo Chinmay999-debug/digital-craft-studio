@@ -4,7 +4,7 @@ import { WhyUs } from "@/components/site/WhyUs";
 
 const title = "Why Startup Setup";
 const description = "Built for your business, not a template — why teams choose Startup Setup.";
-const siteUrl = "https://startupsetup.in/why-us";
+const siteUrl = "https://startupsetup.in/why-us/";
 const ogImage = "https://startupsetup.in/og-image.png";
 
 export const Route = createFileRoute("/why-us")({

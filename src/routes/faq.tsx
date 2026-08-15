@@ -4,7 +4,7 @@ import { Faq } from "@/components/site/Faq";
 
 const title = "FAQ | Startup Setup";
 const description = "Answers to common questions about working with Startup Setup.";
-const siteUrl = "https://startupsetup.in/faq";
+const siteUrl = "https://startupsetup.in/faq/";
 const ogImage = "https://startupsetup.in/og-image.png";
 
 export const Route = createFileRoute("/faq")({

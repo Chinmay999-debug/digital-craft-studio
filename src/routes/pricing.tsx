@@ -4,7 +4,7 @@ import { Pricing } from "@/components/site/Pricing";
 
 const title = "Pricing | Startup Setup";
 const description = "Clear starting points for websites and custom software from Startup Setup.";
-const siteUrl = "https://startupsetup.in/pricing";
+const siteUrl = "https://startupsetup.in/pricing/";
 const ogImage = "https://startupsetup.in/og-image.png";
 
 export const Route = createFileRoute("/pricing")({

@@ -5,7 +5,7 @@ import { SelectedWork } from "@/components/site/SelectedWork";
 const title = "Selected Work | Startup Setup";
 const description =
   "Digital experiences built for real businesses — see what Startup Setup has shipped.";
-const siteUrl = "https://startupsetup.in/work";
+const siteUrl = "https://startupsetup.in/work/";
 const ogImage = "https://startupsetup.in/og-image.png";
 
 export const Route = createFileRoute("/work")({
