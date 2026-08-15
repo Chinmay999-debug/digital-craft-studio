@@ -55,7 +55,8 @@ function Capabilities({ items }: { items: string[] }) {
   );
 }
 
-export function WhatWeBuild() {
+export function WhatWeBuild({ headingLevel = "h2" }: { headingLevel?: "h1" | "h2" } = {}) {
+  const Heading = headingLevel;
   return (
     <section id="services" className="relative overflow-hidden bg-ink py-20 text-ink-fg lg:py-24">
       <div className="pointer-events-none absolute inset-0 grid-lines-dark opacity-70" />
@@ -63,9 +64,9 @@ export function WhatWeBuild() {
         <Reveal className="flex flex-wrap items-end justify-between gap-6 border-b border-ink-line pb-8">
           <div>
             <span className="label-mono text-brand">What we build</span>
-            <h2 className="headline mt-4 max-w-3xl text-[clamp(2rem,3.4vw,3.2rem)]">
+            <Heading className="headline mt-4 max-w-3xl text-[clamp(2rem,3.4vw,3.2rem)]">
               Digital products built around the way your business actually works.
-            </h2>
+            </Heading>
           </div>
           <p className="max-w-sm text-sm text-ink-muted">
             Two core things: websites and custom software, with automation and AI built in where

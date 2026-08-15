@@ -48,7 +48,8 @@ const tiers = [
   },
 ];
 
-export function Pricing() {
+export function Pricing({ headingLevel = "h2" }: { headingLevel?: "h1" | "h2" } = {}) {
+  const Heading = headingLevel;
   const openEnquiry = useEnquiryModal();
   return (
     <section id="pricing" className="bg-ivory py-20 lg:py-24">
@@ -56,9 +57,9 @@ export function Pricing() {
         <Reveal className="flex flex-wrap items-end justify-between gap-6 border-b border-border pb-8">
           <div>
             <span className="label-mono text-brand">Pricing</span>
-            <h2 className="headline mt-4 text-[clamp(2rem,3.4vw,3.2rem)]">
+            <Heading className="headline mt-4 text-[clamp(2rem,3.4vw,3.2rem)]">
               Clear starting points.
-            </h2>
+            </Heading>
           </div>
           <p className="max-w-sm text-sm text-muted-foreground">
             Tell us about your business and the problem you're solving. We'll scope the right

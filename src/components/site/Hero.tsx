@@ -26,8 +26,8 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 max-w-xl text-[16px] leading-relaxed text-muted-foreground lg:text-[17px]">
-              We design and build custom websites and software that help businesses operate better,
-              serve customers faster, and scale with confidence.
+              We design and build custom websites, software and automation that help businesses
+              operate better, serve customers faster, and scale with confidence.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-3">

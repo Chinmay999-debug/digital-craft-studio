@@ -40,7 +40,8 @@ const principles = [
 const DESKTOP_HEIGHT = "h-[460px]";
 const MOBILE_HEIGHT = "h-[340px]";
 
-export function WhyUs() {
+export function WhyUs({ headingLevel = "h2" }: { headingLevel?: "h1" | "h2" } = {}) {
+  const Heading = headingLevel;
   const [active, setActive] = useState(0);
   const itemRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
@@ -68,9 +69,9 @@ export function WhyUs() {
         <Reveal className="grid grid-cols-1 gap-6 border-b border-ink-line pb-8 lg:grid-cols-[1.2fr_1fr] lg:items-end">
           <div>
             <span className="label-mono text-brand">Why Startup Setup</span>
-            <h2 className="headline mt-4 text-[clamp(2rem,3.4vw,3.2rem)]">
+            <Heading className="headline mt-4 text-[clamp(2rem,3.4vw,3.2rem)]">
               Built for your business. Not a template.
-            </h2>
+            </Heading>
           </div>
           <p className="text-sm leading-relaxed text-ink-muted">
             We don't start with a template and ask your business to fit it. We start with how your

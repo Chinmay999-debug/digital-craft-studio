@@ -9,11 +9,12 @@ import { Pricing } from "@/components/site/Pricing";
 import { Faq } from "@/components/site/Faq";
 import { FinalCta } from "@/components/site/FinalCta";
 
-const title = "Startup Setup | Custom websites & business software studio";
+const title = "Startup Setup — Custom Websites, Software & Digital Systems";
 const description =
-  "Startup Setup is a digital product studio building custom business websites, CRMs, dashboards and automation for companies that need better digital infrastructure.";
-const siteUrl = "https://startupsetup.in";
-const ogImage = `${siteUrl}/og-image.png`;
+  "Startup Setup is a digital product studio building custom websites, business software, automation and AI-powered systems for growing businesses.";
+const origin = "https://startupsetup.in";
+const siteUrl = `${origin}/`;
+const ogImage = `${origin}/og-image.png`;
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -32,6 +33,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:description", content: description },
       { name: "twitter:image", content: ogImage },
     ],
+    links: [{ rel: "canonical", href: siteUrl }],
   }),
   component: Index,
 });

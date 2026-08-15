@@ -29,7 +29,8 @@ const faqs = [
   ],
 ] as const;
 
-export function Faq() {
+export function Faq({ headingLevel = "h2" }: { headingLevel?: "h1" | "h2" } = {}) {
+  const Heading = headingLevel;
   const [open, setOpen] = useState<number | null>(0);
   return (
     <section id="faq" className="bg-ivory py-20 lg:py-24">
@@ -37,9 +38,9 @@ export function Faq() {
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)] lg:gap-16">
           <Reveal>
             <span className="label-mono text-brand">FAQ</span>
-            <h2 className="headline mt-4 text-[clamp(1.8rem,3vw,2.8rem)]">
+            <Heading className="headline mt-4 text-[clamp(1.8rem,3vw,2.8rem)]">
               Questions we get before we start.
-            </h2>
+            </Heading>
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">
               Anything else, ask directly. We answer scope and pricing questions before you commit
               to anything.

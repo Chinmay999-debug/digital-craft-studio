@@ -165,7 +165,7 @@ const projects: Project[] = [
     visual: (
       <img
         src={`${import.meta.env.BASE_URL}work/arise-physiotherapy.jpg`}
-        alt="Arise Physiotherapy website"
+        alt="Arise Physiotherapy website, built by Startup Setup"
         className="h-full w-full object-cover object-top"
       />
     ),
@@ -183,7 +183,7 @@ const projects: Project[] = [
     visual: (
       <img
         src={`${import.meta.env.BASE_URL}work/ilona-clinics.jpg`}
-        alt="Ilona Clinics website"
+        alt="Ilona Clinics website, built by Startup Setup"
         className="h-full w-full object-cover object-top"
       />
     ),
@@ -201,7 +201,7 @@ const projects: Project[] = [
     visual: (
       <img
         src={`${import.meta.env.BASE_URL}work/physiozen.jpg`}
-        alt="PhysioZen website"
+        alt="PhysioZen website, built by Startup Setup"
         className="h-full w-full object-cover object-top"
       />
     ),
@@ -342,16 +342,17 @@ function ProjectCard({ p, delay }: { p: Project; delay: number }) {
   );
 }
 
-export function SelectedWork() {
+export function SelectedWork({ headingLevel = "h2" }: { headingLevel?: "h1" | "h2" } = {}) {
+  const Heading = headingLevel;
   return (
     <section id="work" className="bg-ivory py-20 lg:py-24">
       <div className="mx-auto max-w-[1600px] px-6 lg:px-10">
         <Reveal className="flex flex-wrap items-end justify-between gap-6 border-b border-border pb-8">
           <div>
             <span className="label-mono text-brand">Selected work</span>
-            <h2 className="headline mt-4 max-w-2xl text-[clamp(2rem,3.4vw,3.2rem)]">
+            <Heading className="headline mt-4 max-w-2xl text-[clamp(2rem,3.4vw,3.2rem)]">
               Digital experiences built for real businesses.
-            </h2>
+            </Heading>
           </div>
           <p className="max-w-sm text-sm text-muted-foreground">
             Here's what we've actually shipped: public websites and private business systems we

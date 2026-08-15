@@ -1,1 +1,0 @@
-import{a as e}from"./index-D5DbSjBC.js";import{n as t}from"./Reveal-Dke4BgJn.js";import{t as n}from"./SelectedWork-CN5mTD-b.js";var r=e();function i(){return(0,r.jsxs)(`div`,{className:`min-h-screen bg-ivory`,children:[(0,r.jsx)(t,{}),(0,r.jsx)(`main`,{children:(0,r.jsx)(n,{})})]})}export{i as component};

@@ -5,6 +5,7 @@ import { WhyUs } from "@/components/site/WhyUs";
 const title = "Why Startup Setup";
 const description = "Built for your business, not a template — why teams choose Startup Setup.";
 const siteUrl = "https://startupsetup.in/why-us";
+const ogImage = "https://startupsetup.in/og-image.png";
 
 export const Route = createFileRoute("/why-us")({
   head: () => ({
@@ -15,10 +16,15 @@ export const Route = createFileRoute("/why-us")({
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
       { property: "og:url", content: siteUrl },
+      { property: "og:image", content: ogImage },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: title },
       { name: "twitter:description", content: description },
+      { name: "twitter:image", content: ogImage },
     ],
+    links: [{ rel: "canonical", href: siteUrl }],
   }),
   component: WhyUsPage,
 });
@@ -28,7 +34,7 @@ function WhyUsPage() {
     <div className="min-h-screen bg-ivory">
       <Nav />
       <main>
-        <WhyUs />
+        <WhyUs headingLevel="h1" />
       </main>
     </div>
   );

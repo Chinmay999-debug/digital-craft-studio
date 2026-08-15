@@ -74,16 +74,34 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
+const orgJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Startup Setup",
+  url: "https://startupsetup.in/",
+  description:
+    "Startup Setup is a digital product studio building custom websites, business software, automation and AI-powered systems for growing businesses.",
+  sameAs: [
+    "https://www.instagram.com/startupsetup.in",
+    "https://www.facebook.com/profile.php?id=61577756885015",
+  ],
+};
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Startup Setup" },
-      { name: "description", content: "Digital product studio building websites and custom business software." },
+      { title: "Startup Setup — Custom Websites, Software & Digital Systems" },
+      {
+        name: "description",
+        content:
+          "Startup Setup is a digital product studio building custom websites, business software, automation and AI-powered systems for growing businesses.",
+      },
       { name: "author", content: "Startup Setup" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { "script:ld+json": orgJsonLd },
     ],
     links: [
       {

@@ -42,7 +42,8 @@ const steps = [
   },
 ];
 
-export function Process() {
+export function Process({ headingLevel = "h2" }: { headingLevel?: "h1" | "h2" } = {}) {
+  const Heading = headingLevel;
   const [active, setActive] = useState(0);
   const itemRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -68,9 +69,9 @@ export function Process() {
         <Reveal className="flex flex-wrap items-end justify-between gap-6 border-b border-border pb-8">
           <div>
             <span className="label-mono text-brand">How we work</span>
-            <h2 className="headline mt-4 max-w-3xl text-[1.75rem] sm:text-[clamp(2rem,3.4vw,3.2rem)]">
+            <Heading className="headline mt-4 max-w-3xl text-[1.75rem] sm:text-[clamp(2rem,3.4vw,3.2rem)]">
               From idea to something your business can actually use.
-            </h2>
+            </Heading>
           </div>
           <p className="max-w-xs font-mono text-[11px] tracking-wide text-muted-foreground uppercase">
             Five stages · milestone based · no black boxes
