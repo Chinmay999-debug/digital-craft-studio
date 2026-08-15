@@ -4,10 +4,11 @@ import {
   Link,
   createRootRouteWithContext,
   useRouter,
+  useLocation,
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
@@ -122,6 +123,20 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
+  const { pathname } = useLocation();
+  const isFirstRender = useRef(true);
+
+  useEffect(() => {
+    // Skip the initial mount so a hard refresh mid-scroll isn't yanked to
+    // the top; every subsequent route change (nav click, CTA) starts fresh.
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+    // Explicit "instant" overrides the global smooth scroll-behavior (used
+    // for in-page motion) so route changes land at the top immediately.
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+  }, [pathname]);
 
   return (
     <QueryClientProvider client={queryClient}>

@@ -4,6 +4,7 @@ import { useEnquiryModal } from "./EnquiryModal";
 import { cn } from "@/lib/utils";
 
 const links = [
+  ["Home", "/"],
   ["Services", "/services"],
   ["Work", "/work"],
   ["Process", "/process"],
