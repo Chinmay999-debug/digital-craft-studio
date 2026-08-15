@@ -1,5 +1,6 @@
 import { SiFacebook, SiInstagram, SiWhatsapp } from "@icons-pack/react-simple-icons";
 import { Mail, Phone } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { useEnquiryModal } from "./EnquiryModal";
 import { Reveal } from "./Reveal";
 
@@ -62,12 +63,12 @@ export function FinalCta() {
                 Start your project
                 <span className="transition-transform group-hover:translate-x-0.5">→</span>
               </button>
-              <a
-                href="#work"
+              <Link
+                to="/work"
                 className="inline-flex items-center gap-2 rounded-md border border-ink-line px-5 py-3 text-sm font-medium text-ink-fg transition-colors hover:bg-ink-2"
               >
                 View our work
-              </a>
+              </Link>
             </div>
           </Reveal>
 

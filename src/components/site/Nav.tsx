@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { useEnquiryModal } from "./EnquiryModal";
 import { cn } from "@/lib/utils";
 
 const links = [
-  ["Services", "#services"],
-  ["Work", "#work"],
-  ["Process", "#process"],
-  ["Why Us", "#why"],
-  ["Pricing", "#pricing"],
-  ["FAQ", "#faq"],
+  ["Services", "/services"],
+  ["Work", "/work"],
+  ["Process", "/process"],
+  ["Why Us", "/why-us"],
+  ["Pricing", "/pricing"],
+  ["FAQ", "/faq"],
 ] as const;
 
 export function Nav() {
@@ -33,19 +34,19 @@ export function Nav() {
       )}
     >
       <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between gap-6 px-6 lg:px-10">
-        <a href="#top" className="flex items-center gap-2.5">
+        <Link to="/" className="flex items-center gap-2.5">
           <span className="text-[15px] font-semibold tracking-tight">Startup Setup</span>
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-8 lg:flex">
-          {links.map(([label, href]) => (
-            <a
+          {links.map(([label, to]) => (
+            <Link
               key={label}
-              href={href}
+              to={to}
               className="relative text-[13px] text-muted-foreground transition-colors hover:text-ink"
             >
               {label}
-            </a>
+            </Link>
           ))}
         </nav>
 
@@ -74,15 +75,15 @@ export function Nav() {
       {open && (
         <div className="border-t border-border bg-ivory px-6 py-4 lg:hidden">
           <div className="grid gap-1">
-            {links.map(([label, href]) => (
-              <a
+            {links.map(([label, to]) => (
+              <Link
                 key={label}
-                href={href}
+                to={to}
                 onClick={() => setOpen(false)}
                 className="rounded-md px-2 py-2.5 text-sm text-muted-foreground hover:bg-ivory-3 hover:text-ink"
               >
                 {label}
-              </a>
+              </Link>
             ))}
             <button
               type="button"

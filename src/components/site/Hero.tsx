@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import { useEnquiryModal } from "./EnquiryModal";
 import { HeroProductDeck } from "./HeroProductDeck";
 import { Reveal } from "./Reveal";
@@ -38,12 +39,12 @@ export function Hero() {
                 Start your project
                 <span className="transition-transform group-hover:translate-x-0.5">→</span>
               </button>
-              <a
-                href="#work"
+              <Link
+                to="/work"
                 className="inline-flex items-center gap-2 rounded-md border border-input px-5 py-3 text-sm font-medium transition-colors hover:bg-ivory-3"
               >
                 View our work
-              </a>
+              </Link>
             </div>
 
             <dl className="mt-10 hidden max-w-xl grid-cols-2 gap-px overflow-hidden rounded-lg border border-border bg-border lg:grid lg:grid-cols-4">
