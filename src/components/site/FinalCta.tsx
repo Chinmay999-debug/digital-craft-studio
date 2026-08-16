@@ -75,8 +75,8 @@ export function FinalCta() {
           <Reveal delay={120}>
             <div className="grid gap-px overflow-hidden rounded-xl border border-ink-line bg-ink-line">
               {[
-                ["Websites", "From ₹15,000"],
-                ["Website + GBP", "₹20,000"],
+                ["Websites", "₹19,999"],
+                ["Website + GBP", "₹24,999"],
                 ["Custom software", "Scoped around your business"],
               ].map(([k, v]) => (
                 <div

@@ -9,7 +9,7 @@ const faqs = [
   ],
   [
     "How much does a website cost?",
-    "Websites start at ₹15,000. A website with Google Business Profile setup is ₹20,000. Custom software is scoped and priced around your requirements.",
+    "Websites are ₹19,999. A website with Google Business Profile setup is ₹24,999. Custom software is scoped and priced around your requirements.",
   ],
   [
     "Can you build custom software for an existing business?",

@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 const tiers = [
   {
     name: "Website",
-    price: "Starting at ₹15,000",
+    price: "₹19,999",
     sub: "Custom business website designed around what your customers need to see and do.",
     includes: [
       "Custom UI/UX design",
@@ -19,7 +19,7 @@ const tiers = [
   },
   {
     name: "Website + Google Business Profile",
-    price: "₹20,000",
+    price: "₹24,999",
     sub: "Everything in the website package, plus a stronger local business presence.",
     includes: [
       "Everything in Website",
