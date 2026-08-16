@@ -34,7 +34,7 @@ const tiers = [
   {
     name: "Custom Software",
     price: "Custom pricing",
-    sub: "Software built around how your business runs — CRM, customer portal, dashboard, or something else entirely.",
+    sub: "Software built around how your business runs: CRM, customer portal, dashboard, or something else entirely.",
     includes: [
       "Business systems & internal tools",
       "Customer-facing platforms",

@@ -4,7 +4,7 @@ import { Process } from "@/components/site/Process";
 
 const title = "Our Process | Startup Setup";
 const description =
-  "From idea to something your business can actually use — how Startup Setup works.";
+  "From idea to something your business can actually use. How Startup Setup works.";
 const siteUrl = "https://startupsetup.in/process/";
 const ogImage = "https://startupsetup.in/og-image.png";
 

@@ -9,7 +9,7 @@ import { Pricing } from "@/components/site/Pricing";
 import { Faq } from "@/components/site/Faq";
 import { FinalCta } from "@/components/site/FinalCta";
 
-const title = "Startup Setup — Custom Websites, Software & Digital Systems";
+const title = "Startup Setup: Custom Websites, Software & Digital Systems";
 const description =
   "Startup Setup is a digital product studio building custom websites, business software, automation and AI-powered systems for growing businesses.";
 const origin = "https://startupsetup.in";

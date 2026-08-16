@@ -3,7 +3,7 @@ import { Nav } from "@/components/site/Nav";
 import { WhyUs } from "@/components/site/WhyUs";
 
 const title = "Why Startup Setup";
-const description = "Built for your business, not a template — why teams choose Startup Setup.";
+const description = "Built for your business, not a template. Why teams choose Startup Setup.";
 const siteUrl = "https://startupsetup.in/why-us/";
 const ogImage = "https://startupsetup.in/og-image.png";
 

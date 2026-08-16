@@ -1,1 +1,0 @@
-import{a as e}from"./index-imT24aRo.js";import{n as t}from"./Reveal-DwZw5ASL.js";import{t as n}from"./WhyUs-DmA4zwHQ.js";var r=e();function i(){return(0,r.jsxs)(`div`,{className:`min-h-screen bg-ivory`,children:[(0,r.jsx)(t,{}),(0,r.jsx)(`main`,{children:(0,r.jsx)(n,{headingLevel:`h1`})})]})}export{i as component};
